@@ -1,0 +1,24 @@
+.container {
+  background-color: antiquewhite;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container .div1 {
+  width: 50%;
+  height: 500px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.container .div2 {
+  width: 50%;
+  height: 1000px;
+  background-color: blueviolet;
+}
+/*# sourceMappingURL=flex.css.map */
