@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Petshop</title>
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body class="pdt">
+    <header class="common">
+        <a href="index.html"><img alt="menu" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjRkZGIiBoZWlnaHQ9IjM2IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMyAxOGgxOHYtMkgzdjJ6bTAtNWgxOHYtMkgzdjJ6bTAtN3YyaDE4VjZIM3oiLz48L3N2Zz4=" height="20px" width="20px"> Petshop</a>
+    </header>
+    <main class="searchMain">
+        <section class="filterSection">
+            <div class="filterContainer">
+                <div>Filters</div>
+                <details>
+                    <summary>Breed</summary>
+                    <div>
+                        <ul>
+                            <li><input type="checkbox" /><label>Bulldog</label></li>
+                            <li><input type="checkbox" /><label>German Shepherd</label></li>
+                            <li><input type="checkbox" /><label>Labrador Retriever</label></li>
+                            <li><input type="checkbox" /><label>Beagle</label></li>
+                            <li><input type="checkbox" /><label>Poodle</label></li>
+                            <li><input type="checkbox" /><label>Chihuahua</label></li>
+                            <li><input type="checkbox" /><label>Golden Retriever</label></li>
+                            <li><input type="checkbox" /><label>Pug</label></li>
+                            <li><input type="checkbox" /><label>Dachshund</label></li>
+                            <li><input type="checkbox" /><label>Boxer</label></li>
+                            <li><input type="checkbox" /><label>Maltese</label></li>
+                            <li><input type="checkbox" /><label>Yorkshire Terrier</label></li>
+                            <li><input type="checkbox" /><label>Siberian Husky</label></li>
+                            <li><input type="checkbox" /><label>Dobermann</label></li>
+                            <li><input type="checkbox" /><label>Great Dane</label></li>
+                            <li><input type="checkbox" /><label>Chow Chow</label></li>
+                            <li><input type="checkbox" /><label>Shih Tzu</label></li>
+                            <li><input type="checkbox" /><label>Akita</label></li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>Rating</summary>
+                    <div>
+                        <ul>
+                            <li><input type="checkbox" /><label>* * * * + </label></li>
+                            <li><input type="checkbox" /><label>* * * + </label></li>
+                            <li><input type="checkbox" /><label>* * + </label></li>
+                            <li><input type="checkbox" /><label>* + </label></li>
+                        </ul>
+                    </div>
+                </details>
+                <details>
+                    <summary>Discount</summary>
+                    <div>
+                        <ul>
+                            <li><input type="checkbox" /><label>10% or More</label></li> 
+                            <li><input type="checkbox" /><label>20% or More</label></li> 
+                            <li><input type="checkbox" /><label>30% or More</label></li> 
+                            <li><input type="checkbox" /><label>40% or More</label></li> 
+                            <li><input type="checkbox" /><label>50% or More</label></li> 
+                            <li><input type="checkbox" /><label>60% or More</label></li> 
+                            <li><input type="checkbox" /><label>70% or More</label></li> 
+                            <li><input type="checkbox" /><label>80% or More</label></li> 
+                            <li><input type="checkbox" /><label>90% or More</label></li> 
+                        </ul>
+                    </div>
+                </details>
+            </div>
+        </section>
+        <section class="searchListSection">
+            <section class="sortingSection">
+                <ul class="sortContainer">
+                    <li>search 1 / search 2 / search 3 (Showing 1 - 50 of 1500)</li>
+                    <li>
+                        <ul class="sortInfoUl">
+                            <li class="head">Sort By</li>
+                            <li>Popularity</li>
+                            <li class="active">Price [Low - Heigh]</li>
+                            <li>Price [Heigh - Low]</li>
+                            <li>Rating</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <ul id="searchresults">
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAjCAQAAAC00HvSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAAAEgAAABIAEbJaz4AAAAHdElNRQfiDA0OIRQ8GclhAAAFhUlEQVRIx32WW2wc9RXGf/OfvczMzu7OzmRm115vHO+Cb9gONmAH23G8CRcRk+CkUpqACkhBSOStASEFEC3QxBSo+sTFEoIWRIAXLlVjAsjEUOoSAoYUsaKFJqJKCQmJ41rGhGRnhwcv61kuOU+j7/v+R2f+M+d8R8IXJ1hNnIPMYmdP591+r8HT8IpuQEZiXhwWb2v7jh+K0cH/mcDynZQWHzfwIg7HJKvz2y2lVumIdCBQEEeDc8WiHCjqbo3b6l3iZUQhtHv6g6R3nGt4mR/FCtYhU5vWR9S9+nY7t0NAlCWkcUhjEwXuEE5O367u1Udq0jJX0/PDJMtoAcy8NqaPpDLg0EeWx3yKUerpxQFSGX1EGzPz0EJ9dSUtQHyzNm4Me5KDxwA/HavwSOJJxrA2Ht8MLYsVbWIdEN+svGp2QyeNnDua6AKsbuXV+GZYxwaAk4DAzGvjZrfKveTL4j/RxEUsQSFAGIvl5NhZ5lazCwWrWxs38zJwAtpJUpvWxoxhuI+Ly8IrgAR3CyurD2nXRYas3K9FAlhT5rvZCRjD2lhN2qEDVuJJ+og+4kmdlUrW8wfAaVQfDX0Y+rvyemgy9KH6WLIJfsv6siZPZ+XkAMRIdKl7UxmHpqobcHqV99Tdif46o0upM4x+9dnw+0v6AEqVO3JIZdS9ZlcMIPKgvh0833ezqalX3ons7A3rLOMS6tHpUbSd4f21y2z6KkoP0LdHHgTsrLrHzjmsqpBDgPY75S8dkQwpHgWeJsVS2iPKXyO74OqKcgAHO6fucbJEt2qjO8SlvtfJUGeFJ2Mbg8R9aJwQsV+E36mzlvrQHm4T6mh0q3D7pQMjpf/5qDnmaj0ldDDB3T70FqIEDnrKXHrWh37BQyVxwO0XXkOgEOUuH1UCVfKU0yq3+tD7CRE4TclVXB+6gyiBgtcgPE0cVbjZRwWRT3nia2uW1T70cr7hjIUcnAn50G0oyEc9TeAF58JVn9okeUR8eWbNKca5sYxt5DVmOLtG+tI+kqhShwnM4QnXldwqnH9T+Ca4u/irZGOMMD1ANyYxkk3F64PP/Gv+syq1B67roux37EwVsYUsbar6eHjcbgeFGArgdITf0J5oVuvZVKXOkLSVdyXlXe2X8uGvqqgURSLmV/e4A/Ie+S0x4xruQGlI/lvqN7Mn4USV1sZtmH8edSLeG60aUNcCCfLBJdcon4qzgUPBqcB/xNnwp+bwqqABbPFpHyZKvFedQHtSvwlyFeIGQFCTVZ8KFdQ/xq40zzfqzPPil6kPhP+pPp3KSVWJskDkJu1Jolu10TtFfxn+HFBItSv/UF6yl4OKhYmFCiRb1OeUSacjBOwv63u5XWij0a2VnloYm03YpGvCE9qfmw2DITr5DPiEC9mESYeuPaLsS9c4LAdg5WJPVXd4Dx7a/cqbDY5DhDt8t/A8JilyRvgV7fffz2pfhy/Om0YggdUc+ji+NgBMVv9OFFDRMFaHP7JbLKAFh2R53og2pqfkD+a2HZMiDDLDmT7x35qJBm6h9wdpWrmOepZOSp+f7ptmEI1j0tfb5KmTU23QilOZxfcSIZV12jhnOO3JbIT7WJjFtWmHC2AaCGDmtXGrWwFMDOD6n0mxCTAwoewMiUEBnFpou/Us+JTVDRdy/rmLoZFOFn1qLRu/J1bQSrVr9v9MigE8HJ9rNlcsCYBlNAPmoDamjyQzYHMpDTzsUzzCUlb4PDwxCM3VHg5wMWsR1Kb1XQsbxW0CotiVjUIHbhd2eaOoTctcxUWV0779ZiMv4HAMq+vbLaVWjsgH5IJ8VJ4rFgMBVy8u7Dd1ohB6dnoqyXE28OJPpYFpVmLwEbM42fnBUr+XXdy2pHnpsPy2uu/4oRhtzDCJ4Tv5HS5Ghiry+i00AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTEyLTEzVDEzOjMzOjIwKzAxOjAw1A4LawAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0xMi0xM1QxMzozMzoyMCswMTowMKVTs9cAAABUdEVYdHN2ZzpiYXNlLXVyaQBmaWxlOi8vL2hvbWUvZGIvc3ZnX2luZm8vc3ZnL2NmL2RhL2NmZGE5MTdkN2RjODJmYzJmMmMzYTZjNjAyYTQxNjBiLnN2Z453ZdcAAAAASUVORK5CYII=" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="pet" style="background-image: url('images/lab.png')">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAQAAACROWYpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MHhxpmL8BAAAB4klEQVQ4y+XSy0sVQBTH8Y9XEy17GXShTKjInhRRkIlkELSwbWRQf0FQYdY2EGrjqk2RQe0KWlyoCHIVKaEVFWERFoEVPTRE00pU1NNCw+srrVXQmc3Mb+Z75sz8Dv9fZKTNs2yy02pztKrXbGhUz7fLdgt0eqZJ+1RpVqr1RYyOducUIEO5Bv2j6oAnDsmaiK5xXxjS4qaUV0JosNVRncI39a67p0P4oUoiHc1xVehw0nJZMhWq1im80S00KpcnYa5it4Que9Ph3Xr0OzKulgptQrihME1NuiukZI9J1UKTRROectgndQomqBUGfVT0a5lwTbg46QsTNlg6SV2nTZ89I/aQkIvvk44NezmFK336Zcodyc6gLiTHeT59LDbfgO5fMM3YZtms4BKLffZ2TNiizbDKWaBJD4TL6U5nuiC8UzwDmqVG6FA6Xi7yQnho/W/QDMf1CmfHdxjs0y402jztrZV6hJT8qbYP6RCalU2xN88ZvcIdK6Yr7IAPwnsHJ9iWdMWQkJoehT2eC19VpXXvWnXCgPOWzGTGRnVCvxp5YIfHQpdTcmZCR4q8ZNCwWguVaRFa7Z9l/yHXaT8Mu+218FTJbMGRyHTMNyE02vhnKCSc0OPR36CQrdSqv0P/6fgJAgebdWIs32oAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTgtMTItMTNUMTE6MzA6MjgrMDE6MDBsiktEAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE4LTEyLTEzVDExOjMwOjI4KzAxOjAwHdfz+AAAAABJRU5ErkJggg==" alt="" />
+                        </div>
+                        <div class="breed">
+                            <a href="pet_details.html">
+                                <h1>Labrador Retriever</h1>
+                            </a>
+                            <span>Age: 2 Mon | Nos: 5 </span>
+                        </div>
+                        <div class="petDetail">
+                            <div class="rate">
+                                <span class="newRate">10000/-</span>
+                                <span class="oldRate">20000</span>
+                                <span class="discount">50% Off</span>
+                            </div>
+                            <div class="features">Colors: Black, Chocolate, Yellow</div>
+                        </div>
+                        <div class="controls">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAHdElNRQfiDA0MFwiigNA1AAADUklEQVRo3u2YPUxTURTHf++VtoQmWBPCR4Eq2oEEAqskhhSDiYm4qoTFBJ2IibhgTEwYTIyTg2FQo3EhRua6mFACJrI56SIaoXwEcKCY8GFaeh362j7a1777XpHH0P8d+t5tzz3/nnPuveccqKCCChyGUjBTgx+3zdUSxNkth0A9QwwQpMomgSQxIkyyaU+8gyjiCEaUDjvq64kiSJEqS3laPkq9rNqcsYfoQwDwmx2bLvBRBwj6GOKZNQI1DGhP73hK3CA4zSHwM8YgAAO8sBaOARYQCDbpsvnv0+hiE4FggYCcgKp9ujVb7BAvi0Bcc1+V7FZWC2bsGL8MadWqwFGjQsDuoSu/foNOR5Kt/M35vwk08J5WUlkCy0SYZOM4LdBKUPceoo9r3OVrZuL/x0AK8u6LMM9pOD4ChRCEGXKSAMBVapwlEMTvLIHsXeH4QVQhUCFwAgmIstazLJ0hkCAJgC9zQNiEHx8ASRLa+q7SApnbME6MEII6xgzT8gQbHGjPjXiL/Hs/Y9QhUIhpyW2GkCmBXSJcAmCQywWFicoi19kAvAwzgq+IqdOFCUBESzzaqZV1S+nS7CfNQAsv2bdQmqm81uYOD8EvzhRSMC5O0wLfaeIin7UZ2eK0m1UzAvqM6Bs3C8pzNw24AA8j3KIZAShssW1oxcPluZdRAmYOKN2gSHGWKRoRHKDgQqAAc4zzw/AE0TcoFO7xBK8hAYVFwizJREYbyzojCvaYoElCzsso24bmLxEDRjivIyCIcRuPqYxKN2/ZL6q+aAyYuWqOB8xr7x7qs+5Tdar9tNPPFQJInopyBBT2eMNj1rX3Fh7Rn/0uF0cufNRSJatczgUrCGIM60zfq23H4ieB2bAQAyFWmeVC9r2aEdYk1ZQiIN3ACPJQF/WtvOJv2epTCKYzabkZ1GyIKYSZlzayGYH71qOhmqkjUZ5CMJMrzaygk2mJLmGhuvwxQ2duUWs9nUwr1224zU5xumD+gHUt1YH0XfHhcHluvSVVrJmdIsQ4vejPAIU1brCky7ssN7OtoYkJ9g7dHUuy+/2o4OFO3u3RdrwEAHqYzSYujhDIucIxAjlXOEYAoIdPLHOu9I9ccmvZwgofSfCFP87ZQH+XVHBS8Q9tiWAiMtDysgAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0xMi0xM1QxMToyMzowOCswMTowMAQWKPoAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMTgtMTItMTNUMTE6MjM6MDgrMDE6MDB1S5BGAAAAAElFTkSuQmCC" alt="" />
+                        </div>
+                        <div class="contact">
+                            <div class="ico">
+                                <img src="data:image/png;base64,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" alt="" />
+                            </div>
+                            <div class="ownerDetails">
+                                <h1>Nix Neo</h1>
+                                <span> +91 97 47 66 33 38</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+</body>
+</html>
